@@ -32,28 +32,7 @@
       "type": "admin",
       "destination": "frontend",
       "default": {
-        "redirects": [
-          {
-            "property": "notapple",
-            "url": "https://www.test.de/",
-            "buttonText": "Test",
-            "useDeeplink": true,
-            "popupHeadline": "Dear Customer",
-            "popupText": "",
-            "ios": false,
-            "android": true
-          },
-          {
-            "property": "Hersteller",
-            "url": "",
-            "buttonText": "Test2",
-            "useDeeplink": false,
-            "popupHeadline": "Dear Customer,",
-            "popupText": "",
-            "ios": true,
-            "android": true
-          }
-        ]
+        "redirects": []
       },
       "params": {
         "label": "Storefront configuration",

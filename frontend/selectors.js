@@ -23,7 +23,7 @@ export const getshowCartButton = createSelector(
       additionalProperties.map((prop) => {
         if (
           redi.property === prop.label &&
-          (prop.value.toLowerCase() === 'yes' || prop.value === 'Shopgate | PS') &&
+          (prop.value.toLowerCase() === 'yes' || prop.value === '1') &&
           ((os === 'ios' && redi.ios === true) || (os === 'android' && redi.android === true))
         ) {
           showCartButton = false;
@@ -67,7 +67,7 @@ export const getRedirect = createSelector(
       properties.map((prop) => {
         if (
           redi.property === prop.label &&
-          (prop.value.toLowerCase() === 'yes' || prop.value === 'Shopgate | PS') &&
+          (prop.value.toLowerCase() === 'yes' || prop.value === '1') &&
           ((os === 'ios' && redi.ios === true) || (os === 'android' && redi.android === true))
         ) {
           if (redi.useDeeplink) {
