@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "id": "@shopgate-project/add-to-cart-redirect",
+  "components": [
+    {
+      "id": "AddToCartBar",
+      "path": "frontend/portals/AddToCartBar/index.jsx",
+      "target": "product.add-to-cart-bar",
+      "type": "portals"
+    },
+    {
+      "id": "FavoritesCTA",
+      "path": "frontend/portals/FavoritesCTA/index.jsx",
+      "target": "favorites.add-to-cart",
+      "type": "portals"
+    },
+    {
+      "type": "translations",
+      "path": "frontend/locale/de-DE.json",
+      "id": "locale/de-DE"
+    },
+    {
+      "type": "translations",
+      "path": "frontend/locale/en-US.json",
+      "id": "locale/es-ES"
+    }
+  ],
+  "steps": [
+  ], 
+  "configuration": {
+    "config": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": {
+        "redirects": [
+          {
+            "property": "notapple",
+            "url": "https://www.test.de/",
+            "buttonText": "Test",
+            "useDeeplink": true,
+            "popupHeadline": "Dear Customer",
+            "popupText": "",
+            "ios": false,
+            "android": true
+          },
+          {
+            "property": "Hersteller",
+            "url": "",
+            "buttonText": "Test2",
+            "useDeeplink": false,
+            "popupHeadline": "Dear Customer,",
+            "popupText": "",
+            "ios": true,
+            "android": true
+          }
+        ]
+      },
+      "params": {
+        "label": "Storefront configuration",
+        "type": "json"
+      }
+    }
+  }
+}
