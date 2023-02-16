@@ -5,7 +5,7 @@ import { config } from './config';
 
 const { redirects } = config;
 
-export const getshowCartButton = createSelector(
+export const getShowCartButton = createSelector(
   getProduct,
   isIos,
   (product, ios) => {
@@ -70,21 +70,12 @@ export const getRedirect = createSelector(
           (prop.value.toLowerCase() === 'yes' || prop.value === '1') &&
           ((os === 'ios' && redi.ios === true) || (os === 'android' && redi.android === true))
         ) {
-          if (redi.useDeeplink) {
-            redirect = {
-              url: deeplink,
-              buttonText: redi.buttonText,
-              popupHeadline: redi.popupHeadline,
-              popupText: redi.popupText,
-            };
-          } else {
-            redirect = {
-              url: redi.url,
-              buttonText: redi.buttonText,
-              popupHeadline: redi.popupHeadline,
-              popupText: redi.popupText,
-            };
-          }
+          redirect = {
+            url: redi.useDeeplink ? deeplink : redi.url,
+            buttonText: redi.buttonText,
+            popupHeadline: redi.popupHeadline,
+            popupText: redi.popupText,
+          };
         }
         return redirect;
       });

@@ -23,24 +23,24 @@ Replaces the add-to-cart button and redirects to a configured page.
   "config": {
     "redirects": [
       {
-        "property": "notapple",
+        "property": "noRedirectForApple",
         "url": "https://www.test.de/",
-        "buttonText": "Test",
-        "useDeeplink": true,
+        "buttonText": "Test 1",
+        "useDeeplink": false,
         "popupHeadline": "Dear Customer",
         "popupText": "This product is not buyable. Continue for more information.",
         "ios": false,
         "android": true
       },
       {
-        "property": "notgoogle",
+        "property": "noRedirectForGoogle",
         "url": "",
-        "buttonText": "Test2",
-        "useDeeplink": false,
-        "popupHeadline": "Dear Customer,",
+        "buttonText": "Test 2",
+        "useDeeplink": true,
+        "popupHeadline": "Dear Customer",
         "popupText": "This product is only available via webstore.",
         "ios": true,
-        "android": true
+        "android": false
       }
     ]
   }

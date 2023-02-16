@@ -25,8 +25,7 @@
       "id": "locale/es-ES"
     }
   ],
-  "steps": [
-  ], 
+  "steps": [],
   "configuration": {
     "config": {
       "type": "admin",
