@@ -3,9 +3,15 @@
   "id": "@shopgate-project/add-to-cart-redirect",
   "components": [
     {
-      "id": "AddToCartBar",
-      "path": "frontend/portals/AddToCartBar/index.jsx",
+      "id": "IosAddToCartBar",
+      "path": "frontend/portals/IosAddToCartBar/index.jsx",
       "target": "product.add-to-cart-bar",
+      "type": "portals"
+    },
+    {
+      "id": "AndroidAddToCartButton",
+      "path": "frontend/portals/AndroidAddToCartButton/index.jsx",
+      "target": "product.ctas.add-to-cart",
       "type": "portals"
     },
     {
