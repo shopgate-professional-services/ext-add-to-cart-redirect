@@ -35,6 +35,20 @@ const popupButton = css({
   lineHeight: 'normal',
 }).toString();
 
+const popupClose = css({
+  borderRadius: '5px',
+  padding: '7px 10px 7px',
+  background: themeConfig.colors.cta,
+  color: themeConfig.colors.ctaContrast,
+  fontSize: '18px',
+  fontWeight: '600',
+  width: 'auto',
+  minHeight: '22px',
+  textAlign: 'center',
+  lineHeight: 'normal',
+  transform: 'translateX(100%)',
+}).toString();
+
 const popupBack = css({
   color: themeConfig.colors.cta,
   fontSize: '18px',
@@ -51,6 +65,7 @@ export default {
   popupContainer,
   popupContent,
   popupButton,
+  popupClose,
   popupBack,
   popupFooter,
 };

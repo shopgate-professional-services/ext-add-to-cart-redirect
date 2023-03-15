@@ -2,7 +2,8 @@
   "a2cr": {
     "popupButtonText": {
       "back": "Zurück",
-      "continue": "Weiter"
+      "continue": "Weiter",
+      "close": "Schließen"
     }
   }
 }

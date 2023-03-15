@@ -14,14 +14,23 @@ const Popup = ({ showPopup, setShowPopup, redirect }) => (
         <div className={styles.popupContent}>
           <h3>{redirect.popupHeadline}</h3>
           <p>{redirect.popupText}</p>
-          <div className={styles.popupFooter}>
-            <button type="button" onClick={() => setShowPopup(!showPopup)} className={styles.popupBack}>
-              <I18n.Text string="a2cr.popupButtonText.back" />
-            </button>
-            <Link href={redirect.url} state={{ target: '_blank' }} className={styles.popupButton}>
-              <I18n.Text string="a2cr.popupButtonText.continue" />
-            </Link>
-          </div>
+          {redirect.noRedirect ? (
+            <div className={styles.popupFooter}>
+              <button type="button" onClick={() => setShowPopup(!showPopup)} className={styles.popupClose}>
+                <I18n.Text string="a2cr.popupButtonText.close" />
+              </button>
+            </div>
+          ) : (
+            <div className={styles.popupFooter}>
+              <button type="button" onClick={() => setShowPopup(!showPopup)} className={styles.popupBack}>
+                <I18n.Text string="a2cr.popupButtonText.back" />
+              </button>
+              <Link href={redirect.url} state={{ target: '_blank' }} className={styles.popupButton}>
+                <I18n.Text string="a2cr.popupButtonText.continue" />
+              </Link>
+            </div>
+          )
+          }
         </div>
       </div>
     ) : null}

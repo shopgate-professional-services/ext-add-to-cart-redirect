@@ -13,6 +13,7 @@ Replaces the add-to-cart button and redirects to a configured page.
 - `popupText`(string) Information text of the popup.
 - `ios` (boolean) Can be `true` or `false`. Activates the redirect for iOS devices.
 - `android` (boolean) Can be `true` or `false`. Activates the redirect for Android devices.
+- `noRedirect` (boolean) Can be `true` or `false`. Activates the redirect in general. Use `false` to just show a customer information without a redirect.
 
 
 

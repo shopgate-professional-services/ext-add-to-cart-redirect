@@ -42,6 +42,7 @@ export const getRedirect = createSelector(
             buttonText: redi.buttonText,
             popupHeadline: redi.popupHeadline,
             popupText: redi.popupText,
+            noRedirect: redi.noRedirect,
           };
         }
       });
