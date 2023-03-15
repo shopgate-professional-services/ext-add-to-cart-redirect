@@ -15,7 +15,7 @@ const Popup = ({ showPopup, setShowPopup, redirect }) => (
           <h3>{redirect.popupHeadline}</h3>
           <p>{redirect.popupText}</p>
           {redirect.noRedirect ? (
-            <div className={styles.popupFooter}>
+            <div className={styles.popupFooterClose}>
               <button type="button" onClick={() => setShowPopup(!showPopup)} className={styles.popupClose}>
                 <I18n.Text string="a2cr.popupButtonText.close" />
               </button>

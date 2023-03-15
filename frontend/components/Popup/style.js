@@ -46,7 +46,6 @@ const popupClose = css({
   minHeight: '22px',
   textAlign: 'center',
   lineHeight: 'normal',
-  transform: 'translateX(100%)',
 }).toString();
 
 const popupBack = css({
@@ -61,6 +60,12 @@ const popupFooter = css({
   padding: '1rem',
 }).toString();
 
+const popupFooterClose = css({
+  display: 'flex',
+  justifyContent: 'center',
+  padding: '1rem',
+}).toString();
+
 export default {
   popupContainer,
   popupContent,
@@ -68,4 +73,5 @@ export default {
   popupClose,
   popupBack,
   popupFooter,
+  popupFooterClose,
 };
