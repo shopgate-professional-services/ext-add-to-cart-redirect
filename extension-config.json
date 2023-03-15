@@ -28,7 +28,7 @@
     {
       "type": "translations",
       "path": "frontend/locale/en-US.json",
-      "id": "locale/es-ES"
+      "id": "locale/en-US"
     }
   ],
   "steps": [],
