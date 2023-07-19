@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "id": "@shopgate-project/add-to-cart-redirect",
+  "components": [
+    {
+      "id": "IosAddToCartBar",
+      "path": "frontend/portals/IosAddToCartBar/index.jsx",
+      "target": "product.add-to-cart-bar",
+      "type": "portals"
+    },
+    {
+      "id": "AndroidAddToCartButton",
+      "path": "frontend/portals/AndroidAddToCartButton/index.jsx",
+      "target": "product.ctas.add-to-cart",
+      "type": "portals"
+    },
+    {
+      "id": "FavoritesCTA",
+      "path": "frontend/portals/FavoritesCTA/index.jsx",
+      "target": "favorites.add-to-cart",
+      "type": "portals"
+    },
+    {
+      "type": "translations",
+      "path": "frontend/locale/de-DE.json",
+      "id": "locale/de-DE"
+    },
+    {
+      "type": "translations",
+      "path": "frontend/locale/en-US.json",
+      "id": "locale/en-US"
+    }
+  ],
+  "steps": [],
+  "configuration": {
+    "config": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": {
+        "redirects": []
+      },
+      "params": {
+        "label": "Storefront configuration",
+        "type": "json"
+      }
+    }
+  }
+}
