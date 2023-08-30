@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "id": "@shopgate-project/add-to-cart-redirect",
   "components": [
     {
@@ -12,6 +12,12 @@
       "id": "AndroidAddToCartButton",
       "path": "frontend/portals/AndroidAddToCartButton/index.jsx",
       "target": "product.ctas.add-to-cart",
+      "type": "portals"
+    },
+    {
+      "id": "TabletAddToCartButton",
+      "path": "frontend/portals/TabletAddToCartButton/index.jsx",
+      "target": "product.tablet.right-column.add-to-cart",
       "type": "portals"
     },
     {
@@ -37,7 +43,18 @@
       "type": "admin",
       "destination": "frontend",
       "default": {
-        "redirects": []
+        "redirects": [
+          {
+            "ios": true,
+            "url": "",
+            "android": true,
+            "property": "notapple",
+            "popupText": "Aufgrund der Apple Nutzungbedingungen ist es uns leider nicht möglich diesen Artikel über die App anzubieten. Wir bitten um Verständnis. Klicken Sie auf \"Weiter\", um zum Artikel im Onlineshop zu gelangen",
+            "buttonText": "Auf mobiler Website kaufen",
+            "useDeeplink": true,
+            "popupHeadline": "Kundeninformation"
+          }
+        ]
       },
       "params": {
         "label": "Storefront configuration",
