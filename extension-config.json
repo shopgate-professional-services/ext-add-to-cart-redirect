@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "id": "@shopgate-project/add-to-cart-redirect",
   "components": [
     {
@@ -12,6 +12,12 @@
       "id": "AndroidAddToCartButton",
       "path": "frontend/portals/AndroidAddToCartButton/index.jsx",
       "target": "product.ctas.add-to-cart",
+      "type": "portals"
+    },
+    {
+      "id": "TabletAddToCartButton",
+      "path": "frontend/portals/TabletAddToCartButton/index.jsx",
+      "target": "product.tablet.right-column.add-to-cart",
       "type": "portals"
     },
     {

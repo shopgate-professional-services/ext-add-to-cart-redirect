@@ -8,7 +8,11 @@ import AndroidReplaceAddToCartButton from '../../components/AndroidReplaceAddToC
  * PORTAL AndroidAddToCartButton
  * @returns {JSX}
  */
-const AndroidAddToCartButton = ({ children, redirect }) => {
+const AndroidAddToCartButton = ({ children, redirect, isTablet }) => {
+  if (isTablet) {
+    return null;
+  }
+
   if (!redirect) {
     return children;
   }
@@ -24,10 +28,12 @@ const AndroidAddToCartButton = ({ children, redirect }) => {
 
 AndroidAddToCartButton.propTypes = {
   children: PropTypes.node.isRequired,
+  isTablet: PropTypes.bool,
   redirect: PropTypes.shape(),
 };
 
 AndroidAddToCartButton.defaultProps = {
+  isTablet: false,
   redirect: null,
 };
 

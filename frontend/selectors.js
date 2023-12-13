@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 import { getProductProperties, getBaseProduct, getProduct } from '@shopgate/engage/product';
-import { isIos, isAndroid } from '@shopgate/pwa-common/selectors/client';
+import { isIos, isAndroid, getDeviceInformation } from '@shopgate/pwa-common/selectors/client';
 import { config } from './config';
 
 const { redirects } = config;
@@ -109,5 +109,22 @@ export const getShowCartButton = createSelector(
     );
 
     return show;
+  }
+);
+
+export const getIsTablet = createSelector(
+  getDeviceInformation,
+  (device) => {
+    if (!device || device.isFetching) {
+      return null;
+    }
+
+    const { type } = device;
+
+    if (type === 'tablet') {
+      return true;
+    }
+
+    return false;
   }
 );

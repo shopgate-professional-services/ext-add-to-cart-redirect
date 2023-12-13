@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getRedirect, getShowCartButton } from './selectors';
+import { getRedirect, getShowCartButton, getIsTablet } from './selectors';
 
 /**
  * Maps the contents of the state to the component props.
@@ -10,6 +10,7 @@ import { getRedirect, getShowCartButton } from './selectors';
 const mapStateToProps = (state, props) => ({
   redirect: getRedirect(state, props),
   showCartButton: getShowCartButton(state, props),
+  isTablet: getIsTablet(state, props),
 });
 
 export default connect(mapStateToProps);
