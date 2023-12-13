@@ -43,18 +43,7 @@
       "type": "admin",
       "destination": "frontend",
       "default": {
-        "redirects": [
-          {
-            "ios": true,
-            "url": "",
-            "android": true,
-            "property": "notapple",
-            "popupText": "Aufgrund der Apple Nutzungbedingungen ist es uns leider nicht möglich diesen Artikel über die App anzubieten. Wir bitten um Verständnis. Klicken Sie auf \"Weiter\", um zum Artikel im Onlineshop zu gelangen",
-            "buttonText": "Auf mobiler Website kaufen",
-            "useDeeplink": true,
-            "popupHeadline": "Kundeninformation"
-          }
-        ]
+        "redirects": []
       },
       "params": {
         "label": "Storefront configuration",
