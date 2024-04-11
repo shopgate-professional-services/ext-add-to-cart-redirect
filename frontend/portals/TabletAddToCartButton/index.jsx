@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import connect from '../../connector';
-import IosReplaceAddToCartBar from '../../components/IosReplaceAddToCartBar';
+import TabletReplaceAddToCartButton from '../../components/TabletReplaceAddToCartButton';
 
 /**
- * PORTAL IosAddToCartBar
+ * PORTAL TabletAddToCartButton
  * @returns {JSX}
  */
-const IosAddToCartBar = ({ children, redirect, isTablet }) => {
-  if (isTablet) {
+const TabletAddToCartButton = ({ children, redirect, isTablet }) => {
+  if (!isTablet) {
     return null;
   }
 
@@ -19,21 +19,21 @@ const IosAddToCartBar = ({ children, redirect, isTablet }) => {
   return (
     <div>
       {redirect ? (
-        <IosReplaceAddToCartBar redirect={redirect} />
+        <TabletReplaceAddToCartButton redirect={redirect} />
       ) : children}
     </div>
   );
 };
 
-IosAddToCartBar.propTypes = {
+TabletAddToCartButton.propTypes = {
   children: PropTypes.node.isRequired,
   isTablet: PropTypes.bool,
   redirect: PropTypes.shape(),
 };
 
-IosAddToCartBar.defaultProps = {
+TabletAddToCartButton.defaultProps = {
   isTablet: false,
   redirect: null,
 };
 
-export default connect(IosAddToCartBar);
+export default connect(TabletAddToCartButton);
