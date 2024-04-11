@@ -4,7 +4,7 @@ import connect from '../../connector';
 import TabletReplaceAddToCartButton from '../../components/TabletReplaceAddToCartButton';
 
 /**
- * PORTAL IosAddToCartBar
+ * PORTAL TabletAddToCartButton
  * @returns {JSX}
  */
 const TabletAddToCartButton = ({ children, redirect, isTablet }) => {
